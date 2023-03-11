@@ -42,13 +42,15 @@ for x in range(10):
         random_walk.append(step)
     all_walks.append(random_walk)
 
-print(len(all_walks))
-
 all_walks_arry = np.array(all_walks)
 plt.plot(all_walks_arry)
 plt.show()
 plt.clf()
 all_walks_transpose = np.transpose(all_walks_arry)
 plt.plot(all_walks_transpose)
+plt.show()
+plt.clf()
+end_points = all_walks_transpose[-1,:]
+plt.hist(end_points)
 plt.show()
 
